@@ -55,20 +55,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/button@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@atls-ui-parts/button@npm:0.0.1"
-  dependencies:
-    "@atls-ui-parts/styles": 0.0.1
-  peerDependencies:
-    "@emotion/styled": ^11.1.5
-    react: ^17.0.1
-    styled-system: ^5.1.5
-    styled-tools: ^1.7.2
-  checksum: 6698f82d2d75401e6c6a35d256c7fea568f069610f42aceb9c576eb240f0469b5a7bc8f8b04884d1a9c93c406a44603d3e5d9ca544418db83704387aedfddb34
-  languageName: node
-  linkType: hard
-
 "@atls-ui-parts/button@npm:0.0.7, @atls-ui-parts/button@npm:^0.0.7":
   version: 0.0.7
   resolution: "@atls-ui-parts/button@npm:0.0.7"
@@ -83,6 +69,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/conditional-render@npm:0.0.4":
+  version: 0.0.4
+  resolution: "@atls-ui-parts/conditional-render@npm:0.0.4"
+  peerDependencies:
+    react: ^17.0.1
+  checksum: 0a53cf5c8bb85d123c832d1edd9c64f4bd705c0fdb62d13146d4ef4d45d592770fc70beb1b168672b04d76b657cd9e6fc90c775140310ea0d9d25789324098a6
+  languageName: node
+  linkType: hard
+
 "@atls-ui-parts/events-state@npm:0.0.4":
   version: 0.0.4
   resolution: "@atls-ui-parts/events-state@npm:0.0.4"
@@ -92,7 +87,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/input@npm:^0.0.12":
+"@atls-ui-parts/input@npm:0.0.12":
   version: 0.0.12
   resolution: "@atls-ui-parts/input@npm:0.0.12"
   dependencies:
@@ -132,15 +127,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/styles@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@atls-ui-parts/styles@npm:0.0.1"
-  peerDependencies:
-    styled-system: ^5.1.5
-  checksum: 06a333d67bd87ec26ceb21bc48a670365fe93789e5bec457a9a389a679345693d4bf34d1557c8668c8c9a6495cddf5d38a2dedd610c3310a19f97ef72bb8f5d0
-  languageName: node
-  linkType: hard
-
 "@atls-ui-parts/styles@npm:0.0.4":
   version: 0.0.4
   resolution: "@atls-ui-parts/styles@npm:0.0.4"
@@ -174,6 +160,21 @@ __metadata:
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
   checksum: aaebbfab1147d122315e4075fce8cbf84bf569cc7582cc53cba69fad791ff53e5fd19d2f2623f8f9e4d42a3def1c4f069d76c1f67262d9a81e182862f1b1c124
+  languageName: node
+  linkType: hard
+
+"@atls-ui-proto/input@npm:^0.0.12":
+  version: 0.0.12
+  resolution: "@atls-ui-proto/input@npm:0.0.12"
+  dependencies:
+    "@atls-ui-parts/conditional-render": 0.0.4
+    "@atls-ui-parts/input": 0.0.12
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  checksum: dc3042225140aabbf603e5b7852fb0b6b61b8645c6b279bb8067123dbb7633f0ccd570378fc64b99774eaaf0095f70296f1dd99c1d4b487de297fb2e641f824f
   languageName: node
   linkType: hard
 
@@ -1511,6 +1512,7 @@ __metadata:
     "@emotion/react": ^11.7.1
     "@emotion/styled": ^11.6.0
     "@formatjs/cli": 4.5.0
+    "@identity/index-page": "workspace:0.0.1"
     "@identity/login-page": "workspace:0.0.1"
     "@sumsub/websdk": ^1.3.0
     "@sumsub/websdk-react": ^1.3.0
@@ -1556,7 +1558,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@identity/error-fragment@workspace:identity/fragments/error"
   dependencies:
-    "@atls-ui-parts/button": 0.0.1
+    "@atls-ui-proto/button": ^0.0.8
     "@atls/next-identity-integration": ^0.0.8
     "@emotion/react": ^11.9.0
     "@emotion/styled": ^11.8.1
@@ -1575,6 +1577,24 @@ __metadata:
   peerDependencies:
     react: ^17.0.1
     react-dom: ^17.0.2
+    react-intl: ^5.18.1
+  languageName: unknown
+  linkType: soft
+
+"@identity/index-page@workspace:0.0.1, @identity/index-page@workspace:identity/pages/index-page":
+  version: 0.0.0-use.local
+  resolution: "@identity/index-page@workspace:identity/pages/index-page"
+  dependencies:
+    "@emotion/react": ^11.9.0
+    "@emotion/styled": ^11.8.1
+    "@types/cookie": ^0.4.1
+    "@types/cookies": ^0.7.7
+    "@types/react": ^17.0.38
+    js-cookie: ^3.0.1
+  peerDependencies:
+    next: "*"
+    react: ^17.0.1
+    react-helmet: ^6.1.0
     react-intl: ^5.18.1
   languageName: unknown
   linkType: soft
@@ -1602,9 +1622,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@identity/login-password-fragment@workspace:identity/fragments/login-password"
   dependencies:
-    "@atls-ui-parts/button": ^0.0.7
-    "@atls-ui-parts/input": ^0.0.12
-    "@atls/next-identity-integration": ^0.0.8
+    "@atls-ui-proto/button": ^0.0.8
+    "@atls-ui-proto/input": ^0.0.12
     "@emotion/react": ^11.9.0
     "@emotion/styled": ^11.8.1
     "@identity/messages-fragment": "workspace:0.0.1"
@@ -1634,7 +1653,6 @@ __metadata:
   dependencies:
     "@emotion/react": ^11.9.0
     "@emotion/styled": ^11.8.1
-    "@ory/kratos-client": ^0.8.2-alpha.1
     "@testing-library/react": ^12.1.2
     "@types/react": ^17.0.38
     "@types/styled-system": ^5.1.15
@@ -2568,6 +2586,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/body-parser@npm:*":
+  version: 1.19.2
+  resolution: "@types/body-parser@npm:1.19.2"
+  dependencies:
+    "@types/connect": "*"
+    "@types/node": "*"
+  checksum: e17840c7d747a549f00aebe72c89313d09fbc4b632b949b2470c5cb3b1cb73863901ae84d9335b567a79ec5efcfb8a28ff8e3f36bc8748a9686756b6d5681f40
+  languageName: node
+  linkType: hard
+
 "@types/cacheable-request@npm:^6.0.1":
   version: 6.0.2
   resolution: "@types/cacheable-request@npm:6.0.2"
@@ -2577,6 +2605,34 @@ __metadata:
     "@types/node": "*"
     "@types/responselike": "*"
   checksum: 667d25808dbf46fe104d6f029e0281ff56058d50c7c1b9182774b3e38bb9c1124f56e4c367ba54f92dbde2d1cc573f26eb0e9748710b2822bc0fd1e5498859c6
+  languageName: node
+  linkType: hard
+
+"@types/connect@npm:*":
+  version: 3.4.35
+  resolution: "@types/connect@npm:3.4.35"
+  dependencies:
+    "@types/node": "*"
+  checksum: fe81351470f2d3165e8b12ce33542eef89ea893e36dd62e8f7d72566dfb7e448376ae962f9f3ea888547ce8b55a40020ca0e01d637fab5d99567673084542641
+  languageName: node
+  linkType: hard
+
+"@types/cookie@npm:^0.4.1":
+  version: 0.4.1
+  resolution: "@types/cookie@npm:0.4.1"
+  checksum: 3275534ed69a76c68eb1a77d547d75f99fedc80befb75a3d1d03662fb08d697e6f8b1274e12af1a74c6896071b11510631ba891f64d30c78528d0ec45a9c1a18
+  languageName: node
+  linkType: hard
+
+"@types/cookies@npm:^0.7.7":
+  version: 0.7.7
+  resolution: "@types/cookies@npm:0.7.7"
+  dependencies:
+    "@types/connect": "*"
+    "@types/express": "*"
+    "@types/keygrip": "*"
+    "@types/node": "*"
+  checksum: d3759efc1182cb0651808570ae13638677b67b0ea724eef7b174e58ffe6ea044b62c7c2715e532f76f88fce4dd8101ed32ac6fbb73226db654017924e8a2a1e6
   languageName: node
   linkType: hard
 
@@ -2618,6 +2674,29 @@ __metadata:
   version: 0.0.50
   resolution: "@types/estree@npm:0.0.50"
   checksum: 9a2b6a4a8c117f34d08fbda5e8f69b1dfb109f7d149b60b00fd7a9fb6ac545c078bc590aa4ec2f0a256d680cf72c88b3b28b60c326ee38a7bc8ee1ee95624922
+  languageName: node
+  linkType: hard
+
+"@types/express-serve-static-core@npm:^4.17.18":
+  version: 4.17.29
+  resolution: "@types/express-serve-static-core@npm:4.17.29"
+  dependencies:
+    "@types/node": "*"
+    "@types/qs": "*"
+    "@types/range-parser": "*"
+  checksum: ec4194dc59276ec6dd906887fc377be0cadf4aaa4d535d9052ab9624937ef2b984a8d9da2c11c96979e21f3d9f78f1da93e767dbcec637f7f13d2e3003151145
+  languageName: node
+  linkType: hard
+
+"@types/express@npm:*":
+  version: 4.17.13
+  resolution: "@types/express@npm:4.17.13"
+  dependencies:
+    "@types/body-parser": "*"
+    "@types/express-serve-static-core": ^4.17.18
+    "@types/qs": "*"
+    "@types/serve-static": "*"
+  checksum: 12a2a0e6c4b993fc0854bec665906788aea0d8ee4392389d7a98a5de1eefdd33c9e1e40a91f3afd274011119c506f7b4126acb97fae62ae20b654974d44cba12
   languageName: node
   linkType: hard
 
@@ -2712,6 +2791,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/keygrip@npm:*":
+  version: 1.0.2
+  resolution: "@types/keygrip@npm:1.0.2"
+  checksum: 60bc2738a4f107070ee3d96f44709cb38f3a96c7ccabab09f56c1b2b4d85f869fd8fb9f1f2937e863d0e9e781f005c2223b823bf32b859185b4f52370c352669
+  languageName: node
+  linkType: hard
+
 "@types/keyv@npm:*":
   version: 3.1.4
   resolution: "@types/keyv@npm:3.1.4"
@@ -2725,6 +2811,13 @@ __metadata:
   version: 4.14.181
   resolution: "@types/lodash@npm:4.14.181"
   checksum: 0d1863d8383fd2f8bb42e9e3fc1d6255bb88ff034d6df848941063698944313dae944fc1270315613e3d303fae7c7a9a86085ad3235ed6204c56c4b0b3699aa9
+  languageName: node
+  linkType: hard
+
+"@types/mime@npm:^1":
+  version: 1.3.2
+  resolution: "@types/mime@npm:1.3.2"
+  checksum: 0493368244cced1a69cb791b485a260a422e6fcc857782e1178d1e6f219f1b161793e9f87f5fae1b219af0f50bee24fcbe733a18b4be8fdd07a38a8fb91146fd
   languageName: node
   linkType: hard
 
@@ -2798,6 +2891,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/qs@npm:*":
+  version: 6.9.7
+  resolution: "@types/qs@npm:6.9.7"
+  checksum: 7fd6f9c25053e9b5bb6bc9f9f76c1d89e6c04f7707a7ba0e44cc01f17ef5284adb82f230f542c2d5557d69407c9a40f0f3515e8319afd14e1e16b5543ac6cdba
+  languageName: node
+  linkType: hard
+
+"@types/range-parser@npm:*":
+  version: 1.2.4
+  resolution: "@types/range-parser@npm:1.2.4"
+  checksum: b7c0dfd5080a989d6c8bb0b6750fc0933d9acabeb476da6fe71d8bdf1ab65e37c136169d84148034802f48378ab94e3c37bb4ef7656b2bec2cb9c0f8d4146a95
+  languageName: node
+  linkType: hard
+
 "@types/react-dom@npm:17":
   version: 17.0.17
   resolution: "@types/react-dom@npm:17.0.17"
@@ -2838,6 +2945,16 @@ __metadata:
   version: 7.3.9
   resolution: "@types/semver@npm:7.3.9"
   checksum: 60bfcfdfa7f937be2c6f4b37ddb6714fb0f27b05fe4cbdfdd596a97d35ed95d13ee410efdd88e72a66449d0384220bf20055ab7d6b5df10de4990fbd20e5cbe0
+  languageName: node
+  linkType: hard
+
+"@types/serve-static@npm:*":
+  version: 1.13.10
+  resolution: "@types/serve-static@npm:1.13.10"
+  dependencies:
+    "@types/mime": ^1
+    "@types/node": "*"
+  checksum: eaca858739483e3ded254cad7d7a679dc2c8b3f52c8bb0cd845b3b7eb1984bde0371fdcb0a5c83aa12e6daf61b6beb762545021f520f08a1fe882a3fa4ea5554
   languageName: node
   linkType: hard
 

@@ -4,9 +4,8 @@
   "license": "BSD-3-Clause",
   "main": "src/index.tsx",
   "devDependencies": {
-    "@atls-ui-parts/button": "^0.0.7",
-    "@atls-ui-parts/input": "^0.0.12",
-    "@atls/next-identity-integration": "^0.0.8",
+    "@atls-ui-proto/button": "^0.0.8",
+    "@atls-ui-proto/input": "^0.0.12",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@identity/messages-fragment": "workspace:0.0.1",

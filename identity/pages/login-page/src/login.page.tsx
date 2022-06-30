@@ -15,7 +15,7 @@ export const LoginPage = () => (
         />
       }
     >
-      <Column fill>
+      <Column>
         <LoginPassword />
       </Column>
     </AuthLayout>

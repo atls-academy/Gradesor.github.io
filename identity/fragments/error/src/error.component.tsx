@@ -1,5 +1,5 @@
 import { ErrorNode } from '@atls/next-identity-integration'
-import { Button }    from '@atls-ui-parts/button'
+import { Button }    from '@atls-ui-proto/button'
 
 import React         from 'react'
 

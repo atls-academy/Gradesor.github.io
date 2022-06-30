@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@formatjs/cli": "4.5.0",
+    "@identity/index-page": "workspace:0.0.1",
     "@identity/login-page": "workspace:0.0.1",
     "@sumsub/websdk": "^1.3.0",
     "@sumsub/websdk-react": "^1.3.0",

@@ -4,7 +4,8 @@
   "private": true,
   "workspaces": [
     "ui/**/*",
-    "identity/**/*"
+    "identity/**/*",
+    "identity/pages/**/*"
   ],
   "resolutions": {
     "@types/react": "17",

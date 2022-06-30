@@ -9,7 +9,7 @@ import { Text }            from '@ui/text'
 import { AuthLayoutProps } from './auth-layout.interfaces'
 
 const AuthLayout: FC<AuthLayoutProps> = ({ title, description, children }) => (
-  <Box fill backgroundColor='background.lightPurple'>
+  <Box backgroundColor='background.lightPurple'>
     <Layout flexBasis={[0, 0, 160]} />
     <Column>
       <Layout flexBasis={[0, 0, 64]} />
@@ -22,7 +22,7 @@ const AuthLayout: FC<AuthLayoutProps> = ({ title, description, children }) => (
       >
         <Layout flexBasis={[16, 16, 40]} />
         <Layout width={[343, 343, 504]}>
-          <Column fill>
+          <Column>
             <Layout flexBasis={[48, 48, 40]} />
             <Layout>
               <Text fontSize={['semiBig', 'semiBig', 'big']} fontWeight='bold'>
@@ -36,7 +36,7 @@ const AuthLayout: FC<AuthLayoutProps> = ({ title, description, children }) => (
               </Text>
             </Layout>
             <Layout flexBasis={[48, 48, 32]} />
-            <Layout fill>{children}</Layout>
+            <Layout>{children}</Layout>
           </Column>
         </Layout>
         <Layout flexBasis={[16, 16, 128]} />

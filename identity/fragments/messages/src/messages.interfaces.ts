@@ -1,7 +1,12 @@
-import { UiText } from '@ory/kratos-client'
+export interface UiText {
+  context?: object;
+  id: number;
+  text: string;
+  type: string;
+}
 
 export interface GeneralMessagesProps {
-  messages?: UiText[]
+  messages?: UiText[];
 }
 
 export interface FieldMessagesProps {

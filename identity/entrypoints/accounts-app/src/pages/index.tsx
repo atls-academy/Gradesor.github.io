@@ -1,1 +1,2 @@
-export { default, getServerSideProps } from "@identity/login-page";
+
+export { default, getServerSideProps } from "@identity/index-page";
