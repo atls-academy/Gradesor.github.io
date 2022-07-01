@@ -1,0 +1,9 @@
+{
+  "login_password.your_login": "Your login",
+  "login_password.password": "Password",
+  "login_password.create_account": "Create account",
+  "login_password.login": "Login",
+  "login_password.err.cyryl": "cyrillic is invalid",
+  "login_page.welcome": "Welcome!",
+  "login_page.enter_and_join": "Enter your email, password and join us"
+}
